@@ -1,0 +1,10 @@
+@use "../base/colors" as *;
+
+.hero {
+  &__heading-light {
+    text-align: center;
+  }
+  &__description {
+    color: $clr-white-200;
+  }
+}

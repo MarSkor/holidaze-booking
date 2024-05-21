@@ -1,0 +1,94 @@
+@use "../../mantine" as *;
+@use "../base/colors" as *;
+@use "../utils/mixin" as *;
+
+.footer {
+  margin-top: rem(120px);
+  padding: calc(var(--mantine-spacing-xl) * 2) 0
+    calc(var(--mantine-spacing-xl) * 2);
+  background-color: $clr-black;
+  border-top: rem(1px) solid
+    light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+
+  &__logo {
+    max-width: rem(300px);
+
+    @media (max-width: $mantine-breakpoint-sm) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__description {
+    margin-top: rem(5px);
+    color: $clr-white-400;
+    @media (max-width: $mantine-breakpoint-sm) {
+      margin-top: var(--mantine-spacing-xs);
+      text-align: center;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $mantine-breakpoint-sm) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__groups {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: $mantine-breakpoint-sm) {
+      display: none;
+    }
+  }
+
+  &__wrapper-links {
+    width: rem(160px);
+  }
+
+  &__link {
+    display: block;
+    color: $clr-white-400;
+    font-size: var(--mantine-font-size-sm);
+    padding-top: rem(3px);
+    padding-bottom: rem(3px);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__title {
+    font-size: var(--mantine-font-size-lg);
+    font-weight: 700;
+    font-family: "Canela";
+    margin-bottom: calc(var(--mantine-spacing-xs) / 2);
+    color: $clr-white-200;
+  }
+
+  &__afterFooter {
+    max-width: var(--breakpoint-lg);
+    color: $clr-white-400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--mantine-spacing-xl);
+    padding: var(--mantine-spacing-xl) 0 var(--mantine-spacing-xl);
+    border-top: rem(1px) solid $clr-deeptaupe;
+
+    @media (max-width: $mantine-breakpoint-sm) {
+      flex-direction: column;
+    }
+  }
+  &__social {
+    @media (max-width: $mantine-breakpoint-md) {
+      margin-top: var(--mantine-spacing-xs);
+    }
+  }
+}

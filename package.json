@@ -1,0 +1,32 @@
+{
+  "name": "holidaze-booking",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@mantine/core": "^7.9.1",
+    "@mantine/hooks": "^7.9.1",
+    "@sanity/image-url": "^1.0.2",
+    "@supabase/ssr": "^0.3.0",
+    "@supabase/supabase-js": "^2.43.2",
+    "@tabler/icons-react": "^3.4.0",
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "eslint-config-prettier": "^9.1.0",
+    "postcss": "^8.4.38",
+    "postcss-preset-mantine": "^1.15.0",
+    "postcss-simple-vars": "^7.0.1",
+    "prettier": "^3.2.5",
+    "sass": "^1.77.1"
+  }
+}

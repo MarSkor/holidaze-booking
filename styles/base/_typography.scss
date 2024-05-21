@@ -1,0 +1,87 @@
+@use "./colors" as *;
+
+@font-face {
+  font-family: "Canela";
+  font-weight: 400;
+  src: url(/font/Canela/Canela-Regular-Trial.otf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Canela";
+  font-weight: 400;
+  src: url(/font/Canela/Canela-RegularItalic-Trial.otf);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Canela";
+  font-weight: 500;
+  src: url(/font/Canela/Canela-Medium-Trial.otf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Canela";
+  font-weight: 500;
+  src: url(/font/Canela/Canela-MediumItalic-Trial.otf);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Canela";
+  font-weight: 700;
+  src: url(/font/Canela/Canela-Bold-Trial.otf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Canela";
+  font-weight: 700;
+  src: url(/font/Canela/Canela-BoldItalic-Trial.otf);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400 700;
+  src: url(/font/Montserrat/Montserrat-VariableFont_wght.ttf) format("ttf");
+  font-style: normal;
+}
+
+// --min: /* minimum value */
+// --val: /* preferred value = 5% viewport width */
+// --max: /* maximum value */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Canela";
+  /* minimum, preferred and maximum value */
+  font-size: clamp(var(--min), var(--val), var(--max));
+}
+
+h1 {
+  --min: 1.75rem;
+  --val: 5vw;
+  --max: 3.5rem;
+}
+
+body {
+  font-family: "Montserrat";
+  --min: 1rem;
+  --val: 3vw;
+  --max: 1.125rem;
+}
+
+//headings
+
+.hero__heading-light {
+  color: $clr-white-200;
+}
+
+.hero__heading-dark {
+  color: $clr-black;
+}

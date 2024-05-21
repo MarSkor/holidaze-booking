@@ -1,0 +1,53 @@
+@use "../../mantine" as *;
+@use "../base/colors" as *;
+@use "../utils/mixin" as *;
+
+.header {
+  background-color: $clr-black;
+  height: rem(60px);
+  // border-bottom: rem(1px) solid
+  //   light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+
+  &__wrapper {
+    @include container;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 var(--mantine-spacing-md) 0 var(--mantine-spacing-md);
+    text-decoration: none;
+    color: $clr-white-300;
+    font-weight: 500;
+    font-size: var(--mantine-font-size-sm);
+
+    @media (max-width: $mantine-breakpoint-sm) {
+      height: rem(42px);
+      width: 100%;
+    }
+
+    @mixin hover {
+      background-color: light-dark(
+        var(--mantine-color-gray-0),
+        var(--mantine-color-dark-6)
+      );
+    }
+
+    //to be changed later
+    &.active {
+      color: $clr-white-300;
+      text-decoration: underline;
+    }
+  }
+
+  &__drawer-root {
+    &__content,
+    &__header {
+      background-color: $clr-black;
+    }
+    &__title {
+      color: $clr-white-200;
+    }
+  }
+}

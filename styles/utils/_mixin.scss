@@ -1,0 +1,10 @@
+@mixin container {
+  max-width: var(--breakpoint-lg);
+  margin: 0 auto;
+  padding: 0 var(--mantine-spacing-md) 0 var(--mantine-spacing-md);
+}
+
+@mixin container-reset {
+  max-width: var(--breakpoint-lg);
+  margin: 0 auto;
+}
