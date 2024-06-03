@@ -1,0 +1,15 @@
+@use "../base/colors" as *;
+@use "../../mantine" as *;
+
+.badge {
+  &__root {
+    // background-color: #e7fefb;
+    // color: #245b58;
+
+    background-color: #ffe6d1;
+    color: $clr-brown-300;
+  }
+  &__label {
+    font-size: rem(12px);
+  }
+}

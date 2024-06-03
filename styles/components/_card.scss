@@ -1,0 +1,68 @@
+@use "../../mantine" as *;
+@use "../base/index" as *;
+
+.card {
+  background-color: $clr-white;
+  max-width: 400px;
+  width: 100%;
+
+  &__image-section {
+    position: relative;
+  }
+
+  &__review {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    background: $clr-white;
+    text-align: center;
+    border-radius: var(--mantine-radius-md);
+    padding: 4px 8px;
+    font-size: 14px;
+    p {
+      font-weight: 500;
+    }
+    span {
+      color: $clr-black;
+      opacity: 0.8;
+    }
+  }
+
+  &__section {
+    &:nth-child(3) {
+      padding-bottom: var(--mantine-spacing-md);
+    }
+
+    &--group {
+      &:nth-child(1) {
+        border-bottom: rem(1px) solid $clr-white-200;
+        padding-bottom: var(--mantine-spacing-md);
+      }
+    }
+
+    padding-left: var(--mantine-spacing-md);
+    padding-right: var(--mantine-spacing-md);
+  }
+
+  &__title {
+    color: $clr-black-200;
+    // opacity: 0.9;
+  }
+
+  &__location {
+    color: $clr-black-100;
+    opacity: 0.85;
+  }
+
+  &__label {
+    text-transform: uppercase;
+    font-size: var(--mantine-font-size-xs);
+    font-weight: 700;
+  }
+
+  &__footer {
+    &--price p:first-child {
+      margin-right: 4px;
+    }
+  }
+}

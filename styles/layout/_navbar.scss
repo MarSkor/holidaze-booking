@@ -3,11 +3,11 @@
 @use "../utils/mixin" as *;
 
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
   background-color: $clr-black;
   height: rem(60px);
-  // border-bottom: rem(1px) solid
-  //   light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
-
   &__wrapper {
     @include container;
   }
@@ -18,7 +18,7 @@
     height: 100%;
     padding: 0 var(--mantine-spacing-md) 0 var(--mantine-spacing-md);
     text-decoration: none;
-    color: $clr-white-300;
+    color: $clr-brown-100;
     font-weight: 500;
     font-size: var(--mantine-font-size-sm);
 
@@ -36,7 +36,7 @@
 
     //to be changed later
     &.active {
-      color: $clr-white-300;
+      color: $clr-white-50;
       text-decoration: underline;
     }
   }
@@ -47,7 +47,7 @@
       background-color: $clr-black;
     }
     &__title {
-      color: $clr-white-200;
+      color: $clr-white-50;
     }
   }
 }

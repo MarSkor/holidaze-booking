@@ -8,3 +8,7 @@
   max-width: var(--breakpoint-lg);
   margin: 0 auto;
 }
+
+@mixin pl-pr() {
+  padding: 0 var(--mantine-spacing-md) 0 var(--mantine-spacing-md);
+}

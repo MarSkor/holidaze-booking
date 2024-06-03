@@ -1,0 +1,9 @@
+export { default as IconArrowRight2 } from "./arrow-right-02-stroke-rounded";
+export { default as IconArrowRight } from "./arrow-right-01-stroke-rounded";
+export { default as IconDoubleBed } from "./bed-double-stroke-rounded";
+export { default as IconSingleBed } from "./bed-single-01-stroke-rounded";
+export { default as IconLocation } from "./location-01-stroke-rounded";
+export { default as IconStar } from "./star-stroke-rounded";
+export { default as IconMultipleUsers } from "./user-multiple-02-stroke-rounded";
+export { default as IconUser } from "./user-stroke-rounded";
+export { default as IconInfoCircle } from "./information-circle-stroke-rounded";

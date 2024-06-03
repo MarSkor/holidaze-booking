@@ -1,4 +1,5 @@
 @use "../utils/mixin" as *;
+@use "../base/colors" as *;
 
 .container {
   @include container;
@@ -6,4 +7,12 @@
 
 .container-reset {
   @include container-reset;
+}
+
+.container-color_featured {
+  background-color: #e8e2d6;
+}
+
+.container-color_stats {
+  background-color: #3b3836;
 }

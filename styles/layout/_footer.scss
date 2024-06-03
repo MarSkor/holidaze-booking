@@ -22,7 +22,7 @@
 
   &__description {
     margin-top: rem(5px);
-    color: $clr-white-400;
+    color: $clr-white-300;
     @media (max-width: $mantine-breakpoint-sm) {
       margin-top: var(--mantine-spacing-xs);
       text-align: center;
@@ -54,7 +54,7 @@
 
   &__link {
     display: block;
-    color: $clr-white-400;
+    color: $clr-white-300;
     font-size: var(--mantine-font-size-sm);
     padding-top: rem(3px);
     padding-bottom: rem(3px);
@@ -74,13 +74,13 @@
 
   &__afterFooter {
     max-width: var(--breakpoint-lg);
-    color: $clr-white-400;
+    color: $clr-white-300;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: var(--mantine-spacing-xl);
     padding: var(--mantine-spacing-xl) 0 var(--mantine-spacing-xl);
-    border-top: rem(1px) solid $clr-deeptaupe;
+    border-top: rem(1px) solid $clr-brown;
 
     @media (max-width: $mantine-breakpoint-sm) {
       flex-direction: column;

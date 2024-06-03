@@ -1,6 +1,15 @@
-# An accommodation booking website built with Next.js, Sanity, Supabase and Mantine
+# An accommodation booking website
 
 ⏳ under development.
+
+---
+
+## Tech Stack
+
+[Next.js](https://nextjs.org/)
+[Sanity](https://www.sanity.io)
+[Supabase Auth](https://supabase.com/auth)
+[Mantine](https://mantine.dev) + [SCSS](https://sass-lang.com)
 
 ---
 

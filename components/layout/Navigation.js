@@ -3,7 +3,6 @@ import {
   Group,
   Button,
   Divider,
-  Box,
   Burger,
   Drawer,
   ScrollArea,
@@ -16,76 +15,61 @@ import { IconSearch } from "@tabler/icons-react";
 import Link from "next/link";
 import HolidazeLogo from "./HolidazeLogo";
 
+const links = [
+  { link: "/", label: "Home" },
+  { link: "/accommodation", label: "Accommodation" },
+  { link: "/about", label: "About us" },
+  { link: "/contact", label: "Contact us" },
+];
+
 const Navigation = () => {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
 
   return (
-    <Box>
-      <header className="header">
-        <Group justify="space-between" h="100%" className="header__wrapper">
-          <HolidazeLogo />
-
-          <Group h="100%" gap={0} visibleFrom="sm">
-            <NavLink href={"/"} text={"Home"} />
-            <NavLink href={"/accommodation"} text={"Accommodation"} />
-            <NavLink href={"/contact"} text={"Contact us"} />
-            <NavLink href={"/about"} text={"About us"} />
-          </Group>
-
-          <Group visibleFrom="sm">
-            <IconSearch
-              style={{ width: rem(16), height: rem(16), color: "#c5bcb3" }}
-              stroke={1.5}
-            />
-            {/* // ADDING SEARCH FUNCTIONALITY LATER */}
-            {/* <Autocomplete
-              className={classes.search}
-              placeholder="Search"
-              leftSection={
-                <IconSearch
-                  style={{ width: rem(16), height: rem(16) }}
-                  stroke={1.5}
-                />
-              }
-              data={[
-                "React",
-                "Angular",
-                "Vue",
-                "Next.js",
-                "Riot.js",
-                "Svelte",
-                "Blitz.js",
-              ]}
-              visibleFrom="xs"
-            /> */}
-            <Button
-              variant="transparent"
-              color="#c5bcb3"
-              component={Link}
-              href={"/login"}
-            >
-              Log in
-            </Button>
-            <Button
-              variant="outline"
-              color="#c5bcb3"
-              component={Link}
-              href={"/accommodation"}
-            >
-              Book Now
-            </Button>
-          </Group>
-
-          <Burger
-            opened={drawerOpened}
-            onClick={toggleDrawer}
-            hiddenFrom="sm"
-            color="#c5bcb3"
-          />
+    <header className="header">
+      <Group justify="space-between" h="100%" className="header__wrapper">
+        <HolidazeLogo />
+        <Group h="100%" gap={0} visibleFrom="sm">
+          {links.map((link) => (
+            <NavLink key={link.link} href={link.link} text={link.label} />
+          ))}
         </Group>
-      </header>
 
+        <Group visibleFrom="sm">
+          {/* to be fixed: search option  */}
+          <IconSearch
+            style={{ width: rem(16), height: rem(16), color: "#c5bcb3" }}
+            stroke={1.5}
+          />
+          <Button
+            className="btn btn-tertiary"
+            variant="transparent"
+            color="#c5bcb3"
+            component={Link}
+            href={"/login"}
+          >
+            Log in
+          </Button>
+          <Button
+            className="btn btn-secondary"
+            variant="outline"
+            color="#c5bcb3"
+            component={Link}
+            href={"/accommodation"}
+          >
+            Book Now
+          </Button>
+        </Group>
+        <Burger
+          opened={drawerOpened}
+          onClick={toggleDrawer}
+          hiddenFrom="sm"
+          color="#c5bcb3"
+        />
+      </Group>
+
+      {/* The responsive navbar */}
       <Drawer
         opened={drawerOpened}
         onClose={closeDrawer}
@@ -103,10 +87,9 @@ const Navigation = () => {
       >
         <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md" color="pink">
           <Divider my="sm" color="#282828" />
-          <NavLink href={"/"} text={"Home"} />
-          <NavLink href={"/accommodation"} text={"Accommodation"} />
-          <NavLink href={"/contact"} text={"Contact us"} />
-          <NavLink href={"/about"} text={"About us"} />
+          {links.map((link) => (
+            <NavLink key={link.link} href={link.link} text={link.label} />
+          ))}
           <Divider my="sm" color="#282828" />
 
           <Group
@@ -136,7 +119,7 @@ const Navigation = () => {
           </Group>
         </ScrollArea>
       </Drawer>
-    </Box>
+    </header>
   );
 };
 

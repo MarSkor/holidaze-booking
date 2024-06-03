@@ -61,12 +61,25 @@ h5 {
   font-family: "Canela";
   /* minimum, preferred and maximum value */
   font-size: clamp(var(--min), var(--val), var(--max));
+  line-height: 1.5;
 }
 
 h1 {
   --min: 1.75rem;
   --val: 5vw;
   --max: 3.5rem;
+}
+
+h2 {
+  --min: 1.5rem;
+  --val: 5vw;
+  --max: 2rem;
+}
+
+h3 {
+  --min: 1.35rem;
+  --val: 3vw;
+  --max: 1.5rem;
 }
 
 body {
@@ -78,10 +91,16 @@ body {
 
 //headings
 
-.hero__heading-light {
-  color: $clr-white-200;
+.heading-light {
+  color: $clr-white-50;
 }
 
-.hero__heading-dark {
+.heading-dark {
   color: $clr-black;
+}
+
+// paragraphs
+p {
+  color: $clr-black-200;
+  line-height: 1.5;
 }

@@ -1,11 +1,8 @@
 import "@mantine/core/styles.css";
-import { createTheme, MantineProvider } from "@mantine/core";
-import { Navigation, Footer } from "@/components/layout";
+import "@mantine/dates/styles.css";
 import "../styles/main.scss";
-
-const theme = createTheme({
-  //if any theme overrides, add them here then to the provider
-});
+import { MantineProvider } from "@mantine/core";
+import { Navigation, Footer } from "@/components/layout";
 
 export const metadata = {
   title: "Holidaze Booking",

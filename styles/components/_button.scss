@@ -1,1 +1,32 @@
 @use "../base/colors" as *;
+
+.btn {
+}
+
+.btn-filled,
+.btn-outline,
+.btn-light {
+  font-weight: 500;
+}
+
+.btn-filled {
+}
+
+.btn-outline {
+  border: 1px solid $clr-brown-300;
+  color: $clr-brown-300;
+
+  &:hover {
+    // background-color: $clr-deeptaupe;
+  }
+}
+
+.btn-light {
+  background-color: #d7d1cd;
+  color: $clr-brown-300;
+  transition: 0.2s ease;
+
+  &:hover {
+    background-color: #877f7b;
+  }
+}
