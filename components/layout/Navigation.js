@@ -11,11 +11,11 @@ import {
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import NavLink from "./NavLink";
-import { IconSearch } from "@tabler/icons-react";
+import { IconSearch } from "../common/icons";
 import Link from "next/link";
 import HolidazeLogo from "./HolidazeLogo";
 
-const links = [
+export const NavLinks = [
   { link: "/", label: "Home" },
   { link: "/accommodation", label: "Accommodation" },
   { link: "/about", label: "About us" },
@@ -31,7 +31,7 @@ const Navigation = () => {
       <Group justify="space-between" h="100%" className="header__wrapper">
         <HolidazeLogo />
         <Group h="100%" gap={0} visibleFrom="sm">
-          {links.map((link) => (
+          {NavLinks.map((link) => (
             <NavLink key={link.link} href={link.link} text={link.label} />
           ))}
         </Group>
@@ -75,7 +75,7 @@ const Navigation = () => {
         onClose={closeDrawer}
         size="100%"
         padding="md"
-        title="Holidaze Navigation"
+        title="Holidaze"
         hiddenFrom="sm"
         zIndex={1000000}
         classNames={{
@@ -87,7 +87,7 @@ const Navigation = () => {
       >
         <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md" color="pink">
           <Divider my="sm" color="#282828" />
-          {links.map((link) => (
+          {NavLinks.map((link) => (
             <NavLink key={link.link} href={link.link} text={link.label} />
           ))}
           <Divider my="sm" color="#282828" />

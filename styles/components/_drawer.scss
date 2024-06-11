@@ -1,0 +1,26 @@
+@use "../../mantine" as *;
+
+.filter-root {
+  z-index: 99999;
+  // position: relative;
+  // top: rem(42px);
+
+  &__close {
+    transition: 0.2s ease;
+    &:hover {
+      background-color: red;
+    }
+  }
+
+  &__inner {
+    // background-color: blue;
+  }
+
+  // &__content {
+  //   background-color: coral;
+  //   z-index: 999;
+  // }
+}
+
+// price, accommodation type, guests
+// popularity etc. in its on select component

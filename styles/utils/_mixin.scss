@@ -12,3 +12,27 @@
 @mixin pl-pr() {
   padding: 0 var(--mantine-spacing-md) 0 var(--mantine-spacing-md);
 }
+
+// input -------------------------------------
+$thumb: 1rem;
+
+@mixin track-styles {
+  appearance: none;
+  background: transparent;
+  border: transparent;
+}
+
+@mixin thumb-styles {
+  appearance: none;
+  pointer-events: all;
+  width: $thumb;
+  height: $thumb;
+  border-radius: 0px;
+  border: 0 none;
+  cursor: grab;
+  background-color: red;
+
+  &:active {
+    cursor: grabbing;
+  }
+}

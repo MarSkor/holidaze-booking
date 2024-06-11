@@ -1,11 +1,4 @@
-import {
-  Flex,
-  Container,
-  Group,
-  Button,
-  Image,
-  SimpleGrid,
-} from "@mantine/core";
+import { Flex, Container, Button, Image, SimpleGrid } from "@mantine/core";
 import { Heading } from "@/components/common/heading";
 import { IconArrowRight } from "@/components/common/icons";
 

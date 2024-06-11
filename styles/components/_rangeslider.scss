@@ -1,0 +1,96 @@
+@use "../utils/mixin" as *;
+@use "../../mantine" as *;
+
+$thumb: rem(16px);
+
+.rangeslider {
+  max-width: 100%;
+  //   padding: 12px;
+  margin: auto;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 20px calc(#{$thumb} / 2);
+    padding-top: 1rem;
+    height: calc(#{$thumb} + 1rem);
+  }
+  &__input-wrapper {
+    width: calc(100% + #{$thumb});
+    margin: 0 calc(#{$thumb} / -2);
+    position: absolute;
+    height: $thumb;
+  }
+  &__control-wrapper {
+    width: 100%;
+    position: absolute;
+    height: $thumb;
+  }
+  &__thumb {
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+    appearance: none;
+    height: 100%;
+    opacity: 0;
+    z-index: 3;
+    padding: 0;
+    &::-ms-track {
+      @include track-styles;
+    }
+
+    &::-moz-range-track {
+      @include track-styles;
+    }
+
+    &:focus::-webkit-slider-runnable-track {
+      @include track-styles;
+    }
+
+    &::-ms-thumb {
+      @include thumb-styles;
+    }
+
+    &::-moz-range-thumb {
+      @include thumb-styles;
+    }
+
+    &::-webkit-slider-thumb {
+      @include thumb-styles;
+    }
+  }
+
+  &__rail {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 6px;
+    border-radius: 3px;
+    background: lightgrey;
+    &--inner-rail {
+      position: absolute;
+      height: 100%;
+      background: hotpink;
+      opacity: 0.5;
+    }
+  }
+  &__control {
+    width: $thumb;
+    height: $thumb;
+    border-radius: 50%;
+    position: absolute;
+    background: hotpink;
+    top: 50%;
+    margin-left: calc(#{$thumb} / -2);
+    transform: translate3d(0, -50%, 0);
+    z-index: 2;
+  }
+}
+
+// .filterdesktop__rangeslider {
+//   border: 1px solid grey;
+//   max-width: 200px;
+//   width: 100%;
+// }

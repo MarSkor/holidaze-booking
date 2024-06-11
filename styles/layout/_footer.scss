@@ -3,12 +3,10 @@
 @use "../utils/mixin" as *;
 
 .footer {
-  margin-top: rem(120px);
   padding: calc(var(--mantine-spacing-xl) * 2) 0
     calc(var(--mantine-spacing-xl) * 2);
   background-color: $clr-black;
-  border-top: rem(1px) solid
-    light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+  border-top: rem(1px) solid var(--mantine-color-dark-5);
 
   &__logo {
     max-width: rem(300px);
@@ -22,7 +20,7 @@
 
   &__description {
     margin-top: rem(5px);
-    color: $clr-white-300;
+    color: $clr-white-200;
     @media (max-width: $mantine-breakpoint-sm) {
       margin-top: var(--mantine-spacing-xs);
       text-align: center;
@@ -54,7 +52,7 @@
 
   &__link {
     display: block;
-    color: $clr-white-300;
+    color: $clr-white-200;
     font-size: var(--mantine-font-size-sm);
     padding-top: rem(3px);
     padding-bottom: rem(3px);
@@ -69,12 +67,12 @@
     font-weight: 700;
     font-family: "Canela";
     margin-bottom: calc(var(--mantine-spacing-xs) / 2);
-    color: $clr-white-200;
+    color: $clr-white-100;
   }
 
   &__afterFooter {
     max-width: var(--breakpoint-lg);
-    color: $clr-white-300;
+    color: $clr-white-200;
     display: flex;
     justify-content: space-between;
     align-items: center;

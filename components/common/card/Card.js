@@ -43,7 +43,7 @@ const BadgeCard = () => {
   ));
 
   return (
-    <Card shadow="sm" padding="lg" radius="md" className="card">
+    <Card withBorder shadow="sm" padding="lg" radius="md" className="card">
       <CardSection className="card__image-section">
         <Image src={image} alt={title} height={180} />
         <Flex align="center" className="card__review">

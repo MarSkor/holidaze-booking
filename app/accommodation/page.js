@@ -1,9 +1,12 @@
-import React from 'react'
+import { Header, Accommodations } from "@/components/pages/accommodation";
 
 const page = () => {
   return (
-    <div>page</div>
-  )
-}
+    <>
+      <Header />
+      <Accommodations />
+    </>
+  );
+};
 
-export default page
+export default page;

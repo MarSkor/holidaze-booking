@@ -23,7 +23,6 @@ export const FooterData = [
       { label: "1-800-123-4567", link: "#" },
       { label: "info@dummy.com", link: "#" },
       { label: "Lorem Ipsum, Bergen 5003  ", link: "#" },
-      { label: "holidaze@service.com", link: "#" },
     ],
   },
 ];

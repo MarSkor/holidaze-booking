@@ -1,0 +1,8 @@
+@use "../../mantine" as *;
+@use "../base/colors" as *;
+
+.filter-badge {
+  background-color: #d9cfc5;
+  color: $clr-black;
+  cursor: pointer;
+}

@@ -1,8 +1,8 @@
 "use client";
-import { Container, Paper, Flex, Image } from "@mantine/core";
+import { Container, Paper, Flex, Avatar } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { useMantineTheme } from "@mantine/core";
-import NextImage from "next/image";
+import Image from "next/image";
 // import { Carousel } from "@mantine/carousel";
 
 const Card = (props) => {
@@ -10,7 +10,7 @@ const Card = (props) => {
     <Paper shadow="md" p="xl" radius="md" className="testimonial-card">
       <Flex className="testimonial-card__header">
         <div className="testimonial-card__img-wrap">
-          <Image component={NextImage} src={props.image} alt={props.name} />
+          <Avatar component={Image} src={props.image} alt={props.name} />
         </div>
         <div className="testimonial-card__heading">
           <h5>{props.name}</h5>

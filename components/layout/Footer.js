@@ -1,12 +1,8 @@
 "use client";
 import { Text, Container, ActionIcon, Group, rem } from "@mantine/core";
-import {
-  IconBrandTwitter,
-  IconBrandInstagram,
-  IconBrandFacebook,
-} from "@tabler/icons-react";
 import HolidazeLogo from "./HolidazeLogo";
 import { FooterData } from "./data";
+import { IconFacebook, IconInstagram, IconTwitter } from "../common/icons";
 
 const Footer = () => {
   const groups = FooterData.map((group) => {
@@ -52,19 +48,16 @@ const Footer = () => {
           wrap="nowrap"
         >
           <ActionIcon size="lg" color="#9c9792" variant="subtle">
-            <IconBrandTwitter
+            <IconTwitter
               style={{ width: rem(20), height: rem(20) }}
               stroke={1.5}
             />
           </ActionIcon>
           <ActionIcon size="lg" color="#9c9792" variant="subtle">
-            <IconBrandFacebook
-              style={{ width: rem(20), height: rem(20) }}
-              stroke={1.5}
-            />
+            <IconFacebook />
           </ActionIcon>
           <ActionIcon size="lg" color="#9c9792" variant="subtle">
-            <IconBrandInstagram
+            <IconInstagram
               style={{ width: rem(20), height: rem(20) }}
               stroke={1.5}
             />
